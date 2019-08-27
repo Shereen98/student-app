@@ -1,0 +1,83 @@
+<mat-toolbar>
+        <span>Add a new student</span>
+        <span class="fill-remaining-space"></span>
+        <button class="btn-dialog-close" mat-button (click)="onClose()" tabIndex="-1">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-toolbar>
+      <form [formGroup]="form" class="normal-form" (submit)="onSubmit()">
+        <mat-grid-list cols="2" rowHeight="300px">
+          <mat-grid-tile>
+            <div class="controles-container">
+              <mat-form-field>
+                <input
+                  formControlName="studentId"
+                  matInput
+                  placeholder="Student id"
+                />
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input formControlName="studentFirstName" matInput placeholder="First Name*" />
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            <mat-form-field>
+              <input formControlName="studentLastName" matInput placeholder="Last Name*" />
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+        <mat-form-field>
+          <input formControlName="studentAddress" matInput placeholder="Address*" />
+          <mat-error>This field is mandatory.</mat-error>
+        </mat-form-field>
+             
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile style="margin-left: 5%;">
+            <div class="controles-container">
+                    <mat-form-field>
+                            <input
+                              formControlName="studentDoB"
+                              matInput
+                              [matDatepicker]="picker"
+                              placeholder="Date*"
+                            />
+                            <mat-error>This field is mandatory.</mat-error>
+                            <mat-datepicker-toggle
+                              matSuffix
+                              [for]="picker"
+                            ></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+                    <mat-form-field>
+                            <input formControlName="studentBatchNumber" matInput placeholder="Batch Number*" />
+                            <mat-error>This field is mandatory.</mat-error>
+                          </mat-form-field>
+                          <mat-form-field>
+                                <input formControlName="studentFee" matInput placeholder="Fee*" />
+                                <mat-error>This field is mandatory.</mat-error>
+                              </mat-form-field>
+              <div class="button-row">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  type="submit"
+                  [disabled]="form.invalid"
+                  style="background-color:darkblue;color:white"
+                >
+                  Submit
+                </button>
+                <button
+                  mat-raised-button
+                  color="warn"
+                  type="submit"
+                  style="margin-left: 3%; width:8%"
+                  (click)="onClear()"
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+      

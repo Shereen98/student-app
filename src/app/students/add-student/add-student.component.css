@@ -1,0 +1,21 @@
+mat-form-field {
+    width: 400px;
+  }
+  
+  mat-card-title {
+    text-align: center;
+  }
+  
+  form.normal-form {
+    margin-left: 9%;
+    margin-right: 10%;
+  }
+  
+  .controle-container {
+    width: 40px;
+    padding: 10%;
+  }
+  
+  .controle-container > * {
+    width: 40px;
+  }

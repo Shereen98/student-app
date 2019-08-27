@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "https://preprod.gtnexus.com/rest/3.1/$StudentB12",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

@@ -1,0 +1,26 @@
+
+.register-form {
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    margin-left:30%;
+    margin-top:5%;
+    
+    border-radius:5px
+  
+  }
+  
+  .register-form > * {
+    width: 50%;
+  }
+
+  h2{
+      text-align: center;
+      background-color: white;
+      border-radius: 5px;
+      color: rgb(7, 87, 153);
+      width:5%
+  }

@@ -1,0 +1,16 @@
+<form [formGroup]="form" class="normal-form" (submit)="onSubmit()">
+        <div class = "register-form">
+            <h2>Sign Up</h2>
+            <mat-form-field>
+                <input matInput  formControlName="username" placeholder = "Username">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  formControlName="email" placeholder = "Email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  formControlName="password" placeholder = "Password">
+            </mat-form-field>
+            <button [routerLink]="'/students'" style = "width:15%;background-color:  rgb(7, 87, 153);color:white;margin-bottom: 3%" mat-raised-button>Submit</button>
+        </div>
+        </form>
+        
