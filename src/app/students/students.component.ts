@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource, MatSort, MatPaginator, MatDialogConfig, MatDialog } from '@angular/material';
 import { map } from 'rxjs/operators';
 import { AddStudentComponent } from './add-student/add-student.component';
+import { observable, Observable } from 'rxjs';
+import { Student } from '../student';
 
 @Component({
   selector: 'app-students',
@@ -12,9 +14,9 @@ import { AddStudentComponent } from './add-student/add-student.component';
 })
 export class StudentsComponent implements OnInit {
 
-  students;
+  students = new Observable<any>();
   displayedColumns: string[] = ['id','name','dob','address','batchNo','status'];
-  dataSource = new MatTableDataSource<any>();
+  dataSource = new MatTableDataSource<Student[]>();
 
   constructor( private httpService : HttpService,http: HttpClient,private dialog: MatDialog,) { }
 
@@ -47,7 +49,7 @@ export class StudentsComponent implements OnInit {
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "78%";
-    dialogConfig.height = "70%;";
+    dialogConfig.height = "90%;";
     this.dialog.open(AddStudentComponent, dialogConfig);
   }
 }

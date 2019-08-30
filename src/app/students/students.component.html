@@ -40,7 +40,7 @@
       
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Student Id </th>
-          <td mat-cell *matCellDef="let element"> {{element.studentId}} </td>
+         <td mat-cell *matCellDef="let element"><a [routerLink]="element.uid">{{element.uid}} </a> </td>
         </ng-container>
       
         
@@ -62,7 +62,7 @@
       
        
         <ng-container matColumnDef="batchNo">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Batch No. </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Batch Number </th>
           <td mat-cell *matCellDef="let element"> {{element.studentBatchNumber}} </td>
         </ng-container>
 

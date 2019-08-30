@@ -1,0 +1,23 @@
+
+<mat-card class="example-card">
+        <mat-card-header >
+          <mat-card-title *ngFor = "let student of student | async"><h2>{{student.studentFirstName}} &nbsp;{{student.studentLastName}}</h2></mat-card-title>
+        </mat-card-header><hr><br>
+        <mat-card-content>
+          <ul type="none" *ngFor = "let student of student | async">
+            <li>Student Id : {{student.uid}}</li><br>
+            <li>Date of Birth : {{student.studentDoB}}</li><br>
+            <li>Address : {{student.studentAddress}}</li><br>
+            <li>Batch Number : {{student.studentBatchNumber}}</li><br>
+            <li>Fee : Rs.{{student.studentFee}}</li><br>
+            <li>status : {{student.status}}</li>
+          </ul>
+        </mat-card-content>
+       <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="getActions()">Continue</button>
+          <button mat-raised-button >Edit</button>
+        </mat-card-actions>
+        <ul *ngFor = "let action of actions | async" >
+          <li>{{action}}</li>
+        </ul>
+      </mat-card>

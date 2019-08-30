@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "./material/material.module";
 import { HttpService } from "./shared/http.service";
 import { AddStudentComponent } from './students/add-student/add-student.component';
+import { StudentDetailComponent } from './students/student-detail/student-detail.component';
+
 
 
 
@@ -15,7 +17,8 @@ import { AddStudentComponent } from './students/add-student/add-student.componen
   declarations: [
     AppComponent,
     routingComponents,
-    AddStudentComponent
+    AddStudentComponent,
+    StudentDetailComponent,
   ],
   imports: [
     BrowserModule,

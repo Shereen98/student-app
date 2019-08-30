@@ -1,13 +1,10 @@
-export interface Student {
-  payload: any;
-    id: String,
-    fname: String,
-    lname: String,
-    address: String,
-    dateOfBirth: Date,
-    batchNo: Number,
-    //studentType: Boolean,
-    fee: Number,
-    status: String,
-    buyer: String
+export class Student {
+    studentId: String;
+    studentFirstName: String
+    studentLastName: String;
+    studentAddress: String;
+    studentDoB: Date;
+    studentBatchNumber: Number;
+    studentFee: Number;
+    status: String = "";
 }

@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 50%;
+    margin-left:25%;
+    margin-top:5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   /* background-color:silver*/
+  }
+ 
+  li{
+      font-size: 120%;
+  }
+
+  h2{
+      color: rgb(7, 87, 153);
+  }

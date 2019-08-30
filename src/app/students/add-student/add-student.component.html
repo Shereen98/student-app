@@ -9,14 +9,14 @@
         <mat-grid-list cols="2" rowHeight="300px">
           <mat-grid-tile>
             <div class="controles-container">
-              <mat-form-field>
+             <!--<mat-form-field>
                 <input
                   formControlName="studentId"
                   matInput
                   placeholder="Student id"
                 />
                 <mat-error>This field is mandatory.</mat-error>
-              </mat-form-field>
+              </mat-form-field>--> 
               <mat-form-field>
                 <input formControlName="studentFirstName" matInput placeholder="First Name*" />
                 <mat-error>This field is mandatory.</mat-error>
@@ -29,33 +29,35 @@
           <input formControlName="studentAddress" matInput placeholder="Address*" />
           <mat-error>This field is mandatory.</mat-error>
         </mat-form-field>
-             
+        <mat-form-field>
+            <input
+              formControlName="studentDoB"
+              matInput
+              [matDatepicker]="picker"
+              placeholder="Date*"
+            />
+            <mat-error>This field is mandatory.</mat-error>
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
             </div>
           </mat-grid-tile>
           <mat-grid-tile style="margin-left: 5%;">
             <div class="controles-container">
+                    
                     <mat-form-field>
-                            <input
-                              formControlName="studentDoB"
-                              matInput
-                              [matDatepicker]="picker"
-                              placeholder="Date*"
-                            />
-                            <mat-error>This field is mandatory.</mat-error>
-                            <mat-datepicker-toggle
-                              matSuffix
-                              [for]="picker"
-                            ></mat-datepicker-toggle>
-                            <mat-datepicker #picker></mat-datepicker>
-                          </mat-form-field>
-                    <mat-form-field>
-                            <input formControlName="studentBatchNumber" matInput placeholder="Batch Number*" />
+                            <input type="number" formControlName="studentBatchNumber" matInput placeholder="Batch Number*" />
                             <mat-error>This field is mandatory.</mat-error>
                           </mat-form-field>
                           <mat-form-field>
                                 <input formControlName="studentFee" matInput placeholder="Fee*" />
                                 <mat-error>This field is mandatory.</mat-error>
                               </mat-form-field>
+                              <input type="hidden" formControlName="status" value ="active"/>
+                              <br><br><br><br>
               <div class="button-row">
                 <button
                   mat-raised-button
